@@ -29,9 +29,9 @@ public class SaleController {
 	return ResponseEntity.ok(list);
 	
 
-}
+}     //"/sum-by-sellers"
 	//value = "/amount-by-seller"
-	@GetMapping(value = "/sum-by-sellers")
+	@GetMapping(value = "/amount-by-seller")
 	public ResponseEntity<List<SaleSumDTO>> amountGroupedBySeller(){
 	List<SaleSumDTO> list = service.amountGroupedBySeller();
 	return ResponseEntity.ok(list);

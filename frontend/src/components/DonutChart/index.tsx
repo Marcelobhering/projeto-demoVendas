@@ -15,8 +15,10 @@ const DonutChart = () => {
     const [chartData, setChartData]= useState<ChartData>({ labels:[], series:[] });
     
     useEffect (()=> {
+
+       // sales/sum-by-sellers`
             //mudança /sales/amount-by-seller` para 
-        axios.get(`${BASE_URL}/sales/sum-by-sellers`)
+        axios.get(`${BASE_URL}/sales/amount-by-seller`)
         .then(response => {
             const data = response.data as SaleSum[];
             const myLables = data.map(x => x.sellerName);
