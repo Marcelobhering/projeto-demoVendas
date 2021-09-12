@@ -1,5 +1,4 @@
 package com.mar.demo.controllers;
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,8 +30,8 @@ public class SaleController {
 	
 
 }
-	
-	@GetMapping(value = "/amount-by-seller")
+	//value = "/amount-by-seller"
+	@GetMapping(value = "/sum-by-sellers")
 	public ResponseEntity<List<SaleSumDTO>> amountGroupedBySeller(){
 	List<SaleSumDTO> list = service.amountGroupedBySeller();
 	return ResponseEntity.ok(list);

@@ -1,12 +1,13 @@
 package com.mar.demo.dto;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 import com.mar.demo.entities.Sale;
-
-public class SaleDTO {
-	
-	
+//implements
+public class SaleDTO implements Serializable{
+	//
+	private static final long serialVersionUID = 1L;
 	
 	private long id;
 	private Integer visited;
