@@ -32,7 +32,7 @@ const BarChart = () => {
     });
 
     useEffect(() => {
-        axios.get(`${BASE_URL}/sales/success-by-sellers`)
+        axios.get(`${BASE_URL}/sales/success-by-seller`)
             .then(response => {
                 const data = response.data as SaleSuccess[];
                 const myLabels = data.map(x => x.sellerName);
@@ -49,14 +49,14 @@ const BarChart = () => {
                         }
                     ]
                 });
-                //console.log(chartData)
+               
             });
     }, []);
 
     const options = {
         plotOptions: {
             bar: {
-                horizontal: true,
+                horizontal:true,
             }
         },
     };

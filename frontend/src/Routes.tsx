@@ -1,26 +1,35 @@
 
-import Dashboard from 'pages/Dashboard';
-import Home from 'pages/Home';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Dashboard from "pages/Dashboard";
+import Home from "pages/Home";
+import { BrowserRouter } from "react-router-dom";
+import { Switch } from "react-router";
+import { Route } from "react-router";
 
 const Routes = () => {
 
-    return (
-     <BrowserRouter>
-     
+
+  return (
+
+    <BrowserRouter>
+
       <Switch>
-    <Route path="/" exact>
-        <Home />
+        <Route path="/" exact>
+          <Home />
         </Route>
 
-        <Route path="/dashboard" >
-        <Dashboard />
+        <Route path="/dashboard">
+          <Dashboard />
         </Route>
 
-   </Switch>
-   </BrowserRouter>
-    
-    );
-  }
-  
-  export default Routes;
+
+      </Switch>
+
+    </BrowserRouter>
+
+
+
+  );
+
+
+}
+export default Routes;
