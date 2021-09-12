@@ -1,5 +1,5 @@
 
-export type Seller ={
+export type Seller={
 
     id: number;
     name: string;
